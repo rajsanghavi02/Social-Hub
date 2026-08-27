@@ -119,3 +119,14 @@ The live contact section settles correctly at the page footer. Its public phone 
 The Vercel team domain manager does not list an assignable root `social-hub.vercel.app` entry. The project’s existing Vercel-generated aliases include `social-hub-socialhub1.vercel.app` and `social-hub-git-main-socialhub1.vercel.app`, which retain the Social Hub project name without the `omega` suffix.
 
 Direct inspection confirms that `social-hub.vercel.app` is already assigned to a different website. The clean active address for this project is `https://social-hub-socialhub1.vercel.app`.
+
+The clean project alias resolves successfully. Its first navigation check still displayed the prior `#services` behaviour, so the GitHub-linked production deployment will be refreshed and rechecked before the requirement is marked complete.
+
+Vercel now confirms a ready production deployment from GitHub commit `a15e8dc` (`Keep navigation URLs clean`). The clean project-scoped alias loads the latest committed build at its root URL.
+
+After the current production build fully hydrated, selecting Services scrolls smoothly while the browser remains at `https://social-hub-socialhub1.vercel.app/` without appending `#services`.
+
+The Contact navigation was also verified after hydration: it scrolls to the intended section while retaining the clean root URL. The selected project-scoped Vercel address is live, responsive, and free of fragment identifiers during normal navigation.
+
+- [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
+- [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.

@@ -8,7 +8,9 @@ Social Hub is a single-page, responsive digital-marketing website. The visitor-f
 
 ## Live Vercel Deployment
 
-The current production website is live at **https://social-hub-omega.vercel.app**. It is deployed as the `social-hub` project in the `Socialhub` Vercel workspace on the **free Hobby plan**. The Vercel project is linked to the GitHub repository `rajsanghavi02/Social-Hub`, and its production branch is `main`.
+The preferred production website address is **https://social-hub-socialhub1.vercel.app**. It is deployed as the `social-hub` project in the `Socialhub` Vercel workspace on the **free Hobby plan**. The Vercel project is linked to the GitHub repository `rajsanghavi02/Social-Hub`, and its production branch is `main`.
+
+The shorter global `https://social-hub.vercel.app` address is already assigned to another website, so it cannot be used for this project. Vercel also generated `https://social-hub-omega.vercel.app` as a project alias; use the preferred project-scoped address above in social profiles, proposals, and public links because it retains the Social Hub name without the `omega` suffix.
 
 Every future push to `main` automatically creates a production deployment in Vercel. The repository’s `vercel.json` defines the Vite framework settings: Vercel installs with `pnpm install --frozen-lockfile`, runs `pnpm build`, and serves `dist/public` as the static site output. The Vercel project is intentionally configured with no paid add-ons or paid-plan services.
 
