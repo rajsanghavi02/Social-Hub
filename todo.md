@@ -70,11 +70,14 @@ The refined motion system and its guard tests were pushed to GitHub at commit `8
 
 ## Vercel Hobby Deployment — August 2026
 
-- [ ] Review the available Vercel and GitHub connection state, Hobby-plan eligibility, and the project’s Vercel compatibility requirements.
+- [x] Review the available Vercel and GitHub connection state, Hobby-plan eligibility, and the project’s Vercel compatibility requirements.
 - [x] Add Vercel deployment configuration for the React/Vite frontend and ensure managed assets have an external-hosting-safe path.
-- [ ] Connect the existing GitHub repository to a Vercel Hobby project and configure the public phone number environment variable without committing it.
-- [ ] Deploy the latest GitHub source and verify the production deployment has a stable live URL.
-- [ ] Test live navigation, calls to action, images, fonts, scrolling effects, and motion across desktop and mobile viewports.
+- [x] Connect the existing GitHub repository to a Vercel Hobby project and configure the public phone number environment variable without committing it.
+- [x] Deploy the latest GitHub source and verify the production deployment has a stable live URL.
+- [x] Test live navigation, calls to action, images, fonts, scrolling effects, and motion across desktop and mobile viewports.
+- [ ] Verify the live desktop contact route, phone and Instagram actions, asset/font loading, and anchor navigation.
+- [ ] Verify the production-equivalent mobile layout, touch-ready contact hierarchy, and reduced-motion safeguards.
+- [ ] Confirm the final Vercel deployment after the handoff documentation update and synchronize that maintenance note to GitHub.
 - [ ] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
 
 Vercel is connected on the free Hobby workspace `Socialhub`, but its GitHub sign-in connection is not yet linked. The GitHub connection control is open in Vercel account authentication settings.
@@ -100,3 +103,7 @@ The Vercel production deployment is ready at `https://social-hub-omega.vercel.ap
 The live Services navigation updates the production URL to `#services`; the remaining anchor-transition checks will be completed after the smooth scroll settles.
 
 The deployed Services anchor settles correctly at the service catalogue, with the section content and primary visual hierarchy intact.
+
+The live contact URL correctly resolves to `#contact` and exposes the configured phone number plus Instagram destination in the production page content; the visual scroll state is being allowed to settle before final interaction confirmation.
+
+The live contact section settles correctly at the page footer. Its public phone link is configured for `+91 1234567890`, and the Instagram action opens the configured `hersocial.hub` profile in a separate browser tab.

@@ -4,7 +4,15 @@
 
 Social Hub is a single-page, responsive digital-marketing website. The visitor-facing experience is a static React page with client-side anchor navigation, CSS-led motion, a click-to-call contact link, and a link to the Social Hub Instagram profile. The project includes a server, database, and authentication scaffold supplied by the project template, but the current public marketing page does **not** require visitors to log in, call a custom API, or read/write any database data.
 
-> **Maintenance principle:** Keep public content and styling in the client files; use the environment setting only for the phone number; and preserve the managed asset URLs until you deliberately migrate the site to another host.
+> **Maintenance principle:** Keep public content and styling in the client files, use the environment setting only for the phone number, and preserve the repository-backed public asset URLs until you deliberately migrate the site to another host.
+
+## Live Vercel Deployment
+
+The current production website is live at **https://social-hub-omega.vercel.app**. It is deployed as the `social-hub` project in the `Socialhub` Vercel workspace on the **free Hobby plan**. The Vercel project is linked to the GitHub repository `rajsanghavi02/Social-Hub`, and its production branch is `main`.
+
+Every future push to `main` automatically creates a production deployment in Vercel. The repository’s `vercel.json` defines the Vite framework settings: Vercel installs with `pnpm install --frozen-lockfile`, runs `pnpm build`, and serves `dist/public` as the static site output. The Vercel project is intentionally configured with no paid add-ons or paid-plan services.
+
+The public `VITE_SOCIAL_HUB_PHONE` value is configured in Vercel’s **Production** environment as a Config value. Update it through Vercel’s project environment-variable settings, then redeploy (or push a new commit) for the change to appear on the live site. Do not place private credentials in a `VITE_` variable, because such values are exposed to website visitors.
 
 ## Languages, Frameworks, and Runtime
 
@@ -76,6 +84,7 @@ Social-Hub/
 │       ├── index.css               # Brand tokens, responsive layouts, motion, focus states
 │       ├── lib/contact.ts          # Environment-backed phone helpers
 │       ├── lib/contact.test.ts     # Phone configuration unit tests
+│       ├── lib/deployment-assets.test.ts # Vercel-safe asset path test
 │       ├── components/ui/          # Reusable shadcn/ui primitives
 │       ├── contexts/               # Theme setup
 │       └── main.tsx                # React application entry point
@@ -120,7 +129,7 @@ pnpm build     # production build
 pnpm start     # run the built Node/Express app
 ```
 
-The latest validation run passed TypeScript checks, five automated tests across three test files, and the production build. The build output is generated into `dist/` and is intentionally excluded from Git because it is reproducible. The repository now includes `vercel.json` for a Git-connected Vercel deployment: Vercel installs dependencies with `pnpm install --frozen-lockfile`, executes `pnpm build`, and serves `dist/public` as the static output. Configure `VITE_SOCIAL_HUB_PHONE` in the Vercel deployment environment before deploying.
+The latest validation run passed TypeScript checks, six automated tests across four test files, and the production build. The build output is generated into `dist/` and is intentionally excluded from Git because it is reproducible. The repository now includes `vercel.json` for a Git-connected Vercel deployment: Vercel installs dependencies with `pnpm install --frozen-lockfile`, executes `pnpm build`, and serves `dist/public` as the static output. The current Vercel production deployment has the `VITE_SOCIAL_HUB_PHONE` configuration value set.
 
 ## Recommended Maintenance Sequence
 
