@@ -23,37 +23,37 @@ const growthImage = `${assetBaseUrl}/social-hub-growth-tile.jpg`;
 
 const services = [
   {
-    number: "01",
+    id: "social-media-management",
     title: "Social media management",
     description:
       "A consistent, considered presence across Instagram and the channels that matter to your customers.",
   },
   {
-    number: "02",
+    id: "content-creation",
     title: "Content creation",
     description:
       "Photos, reels, videos, and post formats designed to give your brand something worth stopping for.",
   },
   {
-    number: "03",
+    id: "collaboration-shoots",
     title: "Collaboration shoots",
     description:
       "Creative planning and on-location production for partnerships, launches, and promotional campaigns.",
   },
   {
-    number: "04",
+    id: "multi-account-management",
     title: "Multi-account management",
     description:
       "One clear point of coordination for businesses managing more than one audience, location, or account.",
   },
   {
-    number: "05",
+    id: "reach-and-engagement",
     title: "Reach & engagement",
     description:
       "Content and channel strategy that helps the right people find your business and join the conversation.",
   },
   {
-    number: "06",
+    id: "digital-marketing",
     title: "Digital marketing",
     description:
       "A joined-up marketing foundation that turns everyday social activity into meaningful brand momentum.",
@@ -209,8 +209,8 @@ export default function Home() {
           </div>
           <div className="service-list">
             {services.map((service) => (
-              <article key={service.number} className="service-row" data-reveal>
-                <span className="service-number">{service.number}</span>
+              <article key={service.id} className="service-row" data-reveal>
+                <img src={sparkMark} alt="" className="service-spark" />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <ArrowUpRight className="service-arrow" aria-hidden="true" />

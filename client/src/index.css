@@ -113,8 +113,8 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .services-intro h2 { margin: 0; max-width: 32rem; font-size: clamp(2.7rem, 4.3vw, 4.9rem); }
 .services-intro > p:last-child { color: #525259; font-size: 1.03rem; max-width: 27rem; line-height: 1.7; margin: 2rem 0 0; }
 .service-list { border-top: 1px solid #111114; }
-.service-row { display: grid; grid-template-columns: 4rem minmax(9rem, .8fr) minmax(10rem, 1.2fr) 1.4rem; gap: 1rem; padding: 1.74rem 0; border-bottom: 1px solid rgba(17,17,20,.22); align-items: start; }
-.service-number { color: #f63e73; font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(1.35rem, 2vw, 1.9rem); font-weight: 600; letter-spacing: .02em; line-height: 1; padding-top: .02rem; }
+.service-row { display: grid; grid-template-columns: 2.45rem minmax(9rem, .8fr) minmax(10rem, 1.2fr) 1.4rem; gap: 1rem; padding: 1.74rem 0; border-bottom: 1px solid rgba(17,17,20,.22); align-items: start; }
+.service-spark { width: 1.2rem; height: 1.2rem; margin-top: .08rem; object-fit: contain; }
 .service-row h3 { font-size: 1.18rem; line-height: 1.28; margin: 0; font-weight: 700; }
 .service-row p { color: #5b5b62; font-size: .92rem; line-height: 1.68; margin: 0; }
 .service-arrow { width: 1rem; height: 1rem; margin-top: .15rem; }
@@ -219,7 +219,7 @@ html.reveal-ready .motion-image-story.is-visible { transform: translateY(0) scal
   .signal-notes li + li { padding-left: .45rem; }
   .signal-notes b { font-size: 1.1rem; }
   .signal-notes span { font-size: .6rem; letter-spacing: .075em; }
-  .service-row { grid-template-columns: 2.75rem 1fr 1.2rem; gap: .7rem; }
+  .service-row { grid-template-columns: 2.15rem 1fr 1.2rem; gap: .7rem; }
   .service-row p { grid-column: 2 / 4; padding-right: .3rem; }
   .service-arrow { grid-column: 3; grid-row: 1; }
   .process-rail { grid-template-columns: 1fr; }

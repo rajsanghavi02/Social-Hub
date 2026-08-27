@@ -177,9 +177,26 @@ All service numbers now share a Bodoni display treatment with a responsive 1.35�
 
 - [x] Add the approved three-part Signal Notes stack to balance the left side of the Her Social Hub difference section.
 - [x] Preserve the original statement hierarchy and implement a restrained responsive treatment that remains simple on mobile.
-- [ ] Add focused test coverage, validate desktop/mobile layouts, and synchronize the completed enhancement to GitHub.
+- [x] Add focused test coverage, validate desktop/mobile layouts, and synchronize the completed enhancement to GitHub.
 
 The approved Signal Notes stack adds Strategy first, Content with purpose, and Consistency that compounds beside the original positioning statement. The desktop view uses a restrained vertical editorial stack; the mobile view compresses the same principles into a simple three-column detail row. TypeScript, 13 tests, and the production build pass.
+
+The enhancement was pushed to GitHub `main` at commit `a1edb58` (`Add Her Social Hub signal notes`). Vercel has received the commit and started its automatic production deployment.
+
+The local laptop and mobile checks passed, and the GitHub source is current. At final status review, Vercel still reports the automatically triggered production build for `a1edb58` as building; no deployment failure is reported.
+
+## Services Marker Review — August 2026
+
+- [x] Review the repeated numeric hierarchy in the Services section and prepare a premium non-numeric marker recommendation.
+- [x] Await user approval before removing the 01–06 service-card numbers or changing any services-section UI.
+
+## Approved Mini Social Spark Markers — August 2026
+
+- [x] Replace the repeated 01–06 service-card numbers with the approved Mini Social Spark marker.
+- [x] Preserve service headings, descriptions, arrows, editorial spacing, and responsive service-list behaviour.
+- [ ] Add regression coverage, validate desktop/mobile presentation, and synchronize the approved change to GitHub.
+
+The repeated 01–06 service-card numerals are now replaced by the small pink brand spark. The original service headings, descriptions, arrows, row spacing, and mobile service-list layout remain intact. Desktop and mobile reviews, TypeScript, 15 automated tests, and the production build pass.
 
 - [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
 - [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.
