@@ -165,5 +165,13 @@ Vercel’s deployment history now confirms the GitHub-linked production deployme
 
 The assigned production domain `https://hersocial-hub.vercel.app/` now serves the updated live page. Its title, header, hero copy, and service positioning use “Her Social Hub,” while the existing HER SOCIAL HUB artwork remains intact.
 
+## Service Number and Label Emphasis — August 2026
+
+- [x] Audit the service-number scale, the Her Social Hub difference label, and public-facing brand references on laptop and mobile layouts.
+- [x] Increase the service-number impact and difference-label hierarchy without disrupting service-row alignment, responsive behaviour, or motion.
+- [ ] Confirm all relevant public references retain the Her Social Hub name, then validate laptop/mobile presentation and push the final source to GitHub.
+
+All service numbers now share a Bodoni display treatment with a responsive 1.35–1.9rem range and a dedicated column that preserves the service-row grid. The Her Social Hub difference label now uses a responsive 1–1.28rem scale. Final laptop and mobile reviews retain clear hierarchy, service alignment, and the existing animation system; TypeScript, 11 tests, and the production build pass.
+
 - [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
 - [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.

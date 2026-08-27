@@ -100,15 +100,15 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .visual-caption { position: absolute; right: clamp(1.2rem, 3vw, 3.5rem); bottom: clamp(1.5rem, 3vw, 3.2rem); font-size: .64rem; font-weight: 700; line-height: 1.55; letter-spacing: .13em; text-transform: uppercase; }
 .hero-note { position: absolute; left: clamp(1.25rem, 4vw, 4.5rem); bottom: 1.5rem; max-width: 18rem; font-size: .64rem; font-weight: 700; letter-spacing: .13em; line-height: 1.65; text-transform: uppercase; }
 .statement-section { padding: clamp(5rem, 11vw, 10rem) clamp(1.25rem, 10vw, 12rem); display: grid; grid-template-columns: minmax(9rem, .4fr) 1fr; column-gap: 3rem; border-bottom: 1px solid rgba(17,17,20,.15); }
-.section-index { font-size: .7rem; line-height: 1.4; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; margin: .5rem 0 0; }
-.section-index::before { content: "✦"; color: #f63e73; display: block; font-size: 1rem; margin-bottom: .7rem; }
+.section-index { font-size: clamp(1rem, 1.25vw, 1.28rem); line-height: 1.32; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin: .5rem 0 0; }
+.section-index::before { content: "✦"; color: #f63e73; display: block; font-size: 1.32rem; margin-bottom: .72rem; }
 .statement { margin: 0; font-size: clamp(2.7rem, 5.7vw, 6.2rem); max-width: 1030px; }
 .services-section { padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 6vw, 7rem); display: grid; grid-template-columns: minmax(250px, .73fr) minmax(0, 1.1fr); gap: clamp(3rem, 10vw, 10rem); }
 .services-intro h2 { margin: 0; max-width: 32rem; font-size: clamp(2.7rem, 4.3vw, 4.9rem); }
 .services-intro > p:last-child { color: #525259; font-size: 1.03rem; max-width: 27rem; line-height: 1.7; margin: 2rem 0 0; }
 .service-list { border-top: 1px solid #111114; }
-.service-row { display: grid; grid-template-columns: 2.9rem minmax(9rem, .8fr) minmax(10rem, 1.2fr) 1.4rem; gap: 1rem; padding: 1.7rem 0; border-bottom: 1px solid rgba(17,17,20,.22); align-items: start; }
-.service-number { color: #f63e73; font-size: .75rem; font-weight: 700; letter-spacing: .11em; padding-top: .25rem; }
+.service-row { display: grid; grid-template-columns: 4rem minmax(9rem, .8fr) minmax(10rem, 1.2fr) 1.4rem; gap: 1rem; padding: 1.74rem 0; border-bottom: 1px solid rgba(17,17,20,.22); align-items: start; }
+.service-number { color: #f63e73; font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(1.35rem, 2vw, 1.9rem); font-weight: 600; letter-spacing: .02em; line-height: 1; padding-top: .02rem; }
 .service-row h3 { font-size: 1.18rem; line-height: 1.28; margin: 0; font-weight: 700; }
 .service-row p { color: #5b5b62; font-size: .92rem; line-height: 1.68; margin: 0; }
 .service-arrow { width: 1rem; height: 1rem; margin-top: .15rem; }
@@ -205,7 +205,7 @@ html.reveal-ready .motion-image-story.is-visible { transform: translateY(0) scal
   .floating-spark { width: 3.8rem; top: 1.2rem; right: 1.45rem; }
   .visual-caption { font-size: .6rem; }
   .statement { font-size: clamp(2.8rem, 13vw, 4rem); }
-  .service-row { grid-template-columns: 1.8rem 1fr 1.2rem; gap: .7rem; }
+  .service-row { grid-template-columns: 2.75rem 1fr 1.2rem; gap: .7rem; }
   .service-row p { grid-column: 2 / 4; padding-right: .3rem; }
   .service-arrow { grid-column: 3; grid-row: 1; }
   .process-rail { grid-template-columns: 1fr; }
