@@ -186,7 +186,14 @@ export default function Home() {
         </section>
 
         <section className="statement-section" data-reveal aria-label="Her Social Hub positioning">
-          <p className="section-index">The Her Social Hub difference</p>
+          <div className="statement-aside">
+            <p className="section-index">The Her Social Hub difference</p>
+            <ul className="signal-notes" aria-label="Her Social Hub principles">
+              <li><b>01</b><span>Strategy first</span></li>
+              <li><b>02</b><span>Content with purpose</span></li>
+              <li><b>03</b><span>Consistency that compounds</span></li>
+            </ul>
+          </div>
           <p className="statement">
             One focused partner to help your social channels look sharper, <em>work harder,</em> and feel truly yours.
           </p>
