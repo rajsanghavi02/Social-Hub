@@ -6,7 +6,7 @@
  */
 import { Button } from "@/components/ui/button";
 import { getSocialHubPhone, getSocialHubPhoneHref } from "@/lib/contact";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -60,10 +60,23 @@ const services = [
   },
 ];
 
+function scrollToSection(sectionId: string) {
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+}
+
+function handleInPageNavigation(event: MouseEvent<HTMLAnchorElement>, sectionId: string) {
+  event.preventDefault();
+  scrollToSection(sectionId);
+
+  if (window.location.hash) {
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
+}
+
 function ScrollButton({ children }: { children: ReactNode }) {
   return (
     <Button
-      onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+      onClick={() => scrollToSection("contact")}
       className="cta-button group h-auto rounded-none bg-[#111114] px-5 py-3.5 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-white hover:bg-[#f63e73]"
     >
       {children}
@@ -118,20 +131,20 @@ export default function Home() {
   return (
     <div className="concept-page min-h-screen overflow-hidden bg-[#fdfcf9] text-[#111114]">
       <header className={`concept-header ${hasScrolled ? "is-scrolled" : ""}`}>
-        <a href="#top" className="brand-lockup" aria-label="Social Hub home">
+        <a href="#top" className="brand-lockup" aria-label="Social Hub home" onClick={(event) => handleInPageNavigation(event, "top")}>
           <img src={sparkMark} alt="" className="brand-spark" />
           <span>Social Hub</span>
         </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#approach">Approach</a>
-          <a href="#contact">Contact</a>
+          <a href="#services" onClick={(event) => handleInPageNavigation(event, "services")}>Services</a>
+          <a href="#approach" onClick={(event) => handleInPageNavigation(event, "approach")}>Approach</a>
+          <a href="#contact" onClick={(event) => handleInPageNavigation(event, "contact")}>Contact</a>
         </nav>
 
         <Button
           variant="outline"
-          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => scrollToSection("contact")}
           className="header-contact h-auto rounded-none border-[#111114] px-4 py-2.5 text-[0.66rem] font-bold uppercase tracking-[0.15em] text-[#111114] hover:bg-[#111114] hover:text-white"
         >
           Let&apos;s talk
@@ -151,7 +164,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <ScrollButton>Start a conversation</ScrollButton>
-              <a href="#services" className="text-action">
+              <a href="#services" className="text-action" onClick={(event) => handleInPageNavigation(event, "services")}>
                 Explore what we do <ArrowDown className="size-4" />
               </a>
             </div>

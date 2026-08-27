@@ -107,3 +107,15 @@ The deployed Services anchor settles correctly at the service catalogue, with th
 The live contact URL correctly resolves to `#contact` and exposes the configured phone number plus Instagram destination in the production page content; the visual scroll state is being allowed to settle before final interaction confirmation.
 
 The live contact section settles correctly at the page footer. Its public phone link is configured for `+91 1234567890`, and the Instagram action opens the configured `hersocial.hub` profile in a separate browser tab.
+
+## Clean URL and Domain Refinement — August 2026
+
+- [x] Check `social-hub.vercel.app` and closely related Vercel domain availability, plus the current project aliases.
+- [x] Update in-page navigation and contact calls to scroll smoothly without appending fragment identifiers such as `#services` or `#contact`.
+- [ ] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
+- [ ] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.
+- [ ] Save the clean-URL checkpoint and provide the final URL handoff.
+
+The Vercel team domain manager does not list an assignable root `social-hub.vercel.app` entry. The project’s existing Vercel-generated aliases include `social-hub-socialhub1.vercel.app` and `social-hub-git-main-socialhub1.vercel.app`, which retain the Social Hub project name without the `omega` suffix.
+
+Direct inspection confirms that `social-hub.vercel.app` is already assigned to a different website. The clean active address for this project is `https://social-hub-socialhub1.vercel.app`.
