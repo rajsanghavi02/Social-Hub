@@ -75,9 +75,9 @@ The refined motion system and its guard tests were pushed to GitHub at commit `8
 - [x] Connect the existing GitHub repository to a Vercel Hobby project and configure the public phone number environment variable without committing it.
 - [x] Deploy the latest GitHub source and verify the production deployment has a stable live URL.
 - [x] Test live navigation, calls to action, images, fonts, scrolling effects, and motion across desktop and mobile viewports.
-- [ ] Verify the live desktop contact route, phone and Instagram actions, asset/font loading, and anchor navigation.
-- [ ] Verify the production-equivalent mobile layout, touch-ready contact hierarchy, and reduced-motion safeguards.
-- [ ] Confirm the final Vercel deployment after the handoff documentation update and synchronize that maintenance note to GitHub.
+- [x] Verify the live desktop contact route, phone and Instagram actions, asset/font loading, and anchor navigation.
+- [x] Verify the live Vercel mobile layout, touch-ready contact hierarchy, section navigation, and reduced-motion safeguards.
+- [x] Confirm the final Vercel deployment after the handoff documentation update and synchronize that maintenance note to GitHub.
 - [ ] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
 
 Vercel is connected on the free Hobby workspace `Socialhub`, but its GitHub sign-in connection is not yet linked. The GitHub connection control is open in Vercel account authentication settings.
@@ -112,9 +112,9 @@ The live contact section settles correctly at the page footer. Its public phone 
 
 - [x] Check `social-hub.vercel.app` and closely related Vercel domain availability, plus the current project aliases.
 - [x] Update in-page navigation and contact calls to scroll smoothly without appending fragment identifiers such as `#services` or `#contact`.
-- [ ] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
-- [ ] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.
-- [ ] Save the clean-URL checkpoint and provide the final URL handoff.
+- [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
+- [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.
+- [x] Save the clean-URL checkpoint and provide the final URL handoff.
 
 The Vercel team domain manager does not list an assignable root `social-hub.vercel.app` entry. The project’s existing Vercel-generated aliases include `social-hub-socialhub1.vercel.app` and `social-hub-git-main-socialhub1.vercel.app`, which retain the Social Hub project name without the `omega` suffix.
 
@@ -127,6 +127,20 @@ Vercel now confirms a ready production deployment from GitHub commit `a15e8dc` (
 After the current production build fully hydrated, selecting Services scrolls smoothly while the browser remains at `https://social-hub-socialhub1.vercel.app/` without appending `#services`.
 
 The Contact navigation was also verified after hydration: it scrolls to the intended section while retaining the clean root URL. The selected project-scoped Vercel address is live, responsive, and free of fragment identifiers during normal navigation.
+
+Vercel confirms the current production deployment is ready from GitHub commit `f56abad` (`Document clean Social Hub URL`). The linked repository continues to deploy `main` automatically.
+
+Opening a direct deep link such as `#contact` intentionally preserves the supplied fragment. Client-initiated Services and Contact navigation is fragment-free after JavaScript hydration, so ordinary visitor navigation retains the clean root address.
+
+The live contact route exposes the configured call-to-action and the intended Instagram destination; no telephone call was initiated during verification. A settled 375 × 812 production capture confirms the responsive header, primary contact call to action, readable visual hierarchy, and loaded visual assets. Existing motion-guard tests cover the code-level reduced-motion fallback.
+
+An isolated live mobile verification used a 375 × 812 viewport with one touch point and an emulated `prefers-reduced-motion: reduce` setting. It confirmed the deployed `tel:+917016860440` target, the intended Instagram URL, all eight loaded remote repository-owned images, loaded DM Sans and Bodoni Moda fonts, and successful Services and Contact scrolling while the URL remained `https://social-hub-socialhub1.vercel.app/`.
+
+## Copy and Naming Refinement — August 2026
+
+- [x] Audit public website copy to standardize intended “Social Hub” naming while preserving intentional “Her Social Hub” references.
+- [x] Replace unnecessary em dashes and other AI-looking punctuation with natural, human-written copy without changing layout, motion, graphics, or responsive behaviour.
+- [ ] Add focused regression coverage, validate the text-only update, and synchronize the completed source to GitHub.
 
 - [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
 - [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.

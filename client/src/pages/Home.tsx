@@ -160,7 +160,7 @@ export default function Home() {
               <em>scroll</em> count.
             </h1>
             <p className="hero-intro">
-              Social Hub brings strategy, content, and account management together—so your brand has a clearer voice and a stronger place online.
+              Social Hub brings strategy, content, and account management together so your brand has a clearer voice and a stronger place online.
             </p>
             <div className="hero-actions">
               <ScrollButton>Start a conversation</ScrollButton>
@@ -258,7 +258,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="brand-lockup"><img src={sparkMark} alt="" className="brand-spark" /><span>Social Hub</span></div>
         <p>Digital Marketing · Social Media · Branding</p>
-        <p>Initial website concept — 2026</p>
+        <p>Initial website concept, 2026</p>
       </footer>
     </div>
   );
