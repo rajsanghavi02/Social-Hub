@@ -148,5 +148,14 @@ The text-only refinement passed `pnpm check`, `pnpm test` with 9 tests in 6 file
 
 Vercel automatically deployed the source commit and reported it ready. The preferred production URL now serves the colon-style page title and the approved hero sentence without an em dash, while the intentional visual “HER SOCIAL HUB” lock-up remains unchanged.
 
+## Her Social Hub Naming and Typography Review — August 2026
+
+- [x] Audit public brand references and readability-sensitive type sizes across desktop and mobile viewports.
+- [x] Rename visible and relevant website references from “Social Hub” to “Her Social Hub,” including metadata and accessibility labels.
+- [x] Increase only the typography that is unnecessarily small, with priority for service numbering, service text, labels, and supporting copy while preserving hierarchy.
+- [ ] Validate the refined desktop and mobile experience, add focused regression coverage, and push the latest source to GitHub.
+
+The service catalogue, process descriptions, labels, contact links, compact navigation, and footer support text received measured readability increases. Desktop and mobile visual reviews confirm the existing editorial hierarchy and layout remain intact; `pnpm check`, 11 automated tests, and the production build pass.
+
 - [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
 - [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.

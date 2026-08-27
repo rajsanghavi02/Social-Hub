@@ -1,5 +1,5 @@
 /**
- * SOCIAL HUB DESIGN REMINDER — Clean Editorial Signal:
+ * HER SOCIAL HUB DESIGN REMINDER — Clean Editorial Signal:
  * Warm paper-white, ink black, and Social Signal Pink; asymmetric editorial flow,
  * sharp rules and signal strokes, Bodoni Moda for statements, DM Sans for clarity.
  * This is an approval-stage homepage concept, not the final production build.
@@ -131,9 +131,9 @@ export default function Home() {
   return (
     <div className="concept-page min-h-screen overflow-hidden bg-[#fdfcf9] text-[#111114]">
       <header className={`concept-header ${hasScrolled ? "is-scrolled" : ""}`}>
-        <a href="#top" className="brand-lockup" aria-label="Social Hub home" onClick={(event) => handleInPageNavigation(event, "top")}>
+        <a href="#top" className="brand-lockup" aria-label="Her Social Hub home" onClick={(event) => handleInPageNavigation(event, "top")}>
           <img src={sparkMark} alt="" className="brand-spark" />
-          <span>Social Hub</span>
+          <span>Her Social Hub</span>
         </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -160,7 +160,7 @@ export default function Home() {
               <em>scroll</em> count.
             </h1>
             <p className="hero-intro">
-              Social Hub brings strategy, content, and account management together so your brand has a clearer voice and a stronger place online.
+              Her Social Hub brings strategy, content, and account management together so your brand has a clearer voice and a stronger place online.
             </p>
             <div className="hero-actions">
               <ScrollButton>Start a conversation</ScrollButton>
@@ -170,9 +170,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Social Hub campaign direction">
+          <div className="hero-visual" aria-label="Her Social Hub campaign direction">
             <div className="hero-image-wrap">
-              <img src={heroImage} alt="Art-directed content production tools in Social Hub brand colours" />
+              <img src={heroImage} alt="Art-directed content production tools in Her Social Hub brand colours" />
             </div>
             <div className="identity-card">
               <p>Built by</p>
@@ -185,8 +185,8 @@ export default function Home() {
           <div className="hero-note">Designed for brands ready to be recognised, not just seen.</div>
         </section>
 
-        <section className="statement-section" data-reveal aria-label="Social Hub positioning">
-          <p className="section-index">The Social Hub difference</p>
+        <section className="statement-section" data-reveal aria-label="Her Social Hub positioning">
+          <p className="section-index">The Her Social Hub difference</p>
           <p className="statement">
             One focused partner to help your social channels look sharper, <em>work harder,</em> and feel truly yours.
           </p>
@@ -197,7 +197,7 @@ export default function Home() {
             <p className="eyebrow"><span /> Our services</p>
             <h2 id="services-heading">Every part of your social presence, working in one direction.</h2>
             <p>
-              Whether you need day-to-day account care, a campaign shoot, or broader digital marketing support, Social Hub can shape the work around your business.
+              Whether you need day-to-day account care, a campaign shoot, or broader digital marketing support, Her Social Hub can shape the work around your business.
             </p>
           </div>
           <div className="service-list">
@@ -231,10 +231,10 @@ export default function Home() {
               <h2>More than a post. A recognisable point of view.</h2>
               <p>We turn everyday ideas into social content that is aligned, useful, and unmistakably on-brand.</p>
             </div>
-            <img src={contentImage} alt="Editorial Social Hub content creation still life" />
+            <img src={contentImage} alt="Editorial Her Social Hub content creation still life" />
           </div>
           <div className="image-story growth-story motion-image-story" data-reveal>
-            <img src={growthImage} alt="Abstract visual representing Social Hub reach and engagement strategy" />
+            <img src={growthImage} alt="Abstract visual representing Her Social Hub reach and engagement strategy" />
             <div className="story-copy">
               <p className="eyebrow"><span /> Growth, without the guesswork</p>
               <h2>Build a social presence people want to return to.</h2>
@@ -249,14 +249,14 @@ export default function Home() {
           <h2 id="contact-heading">Let&apos;s map your<br /><em>social momentum.</em></h2>
           <p className="contact-copy">Tell us where your brand is now and where you want it to go. We&apos;ll start the conversation from there.</p>
           <div className="contact-links">
-            <a className="contact-link" href={phoneHref} aria-label={`Call Social Hub on ${phoneNumber}`}><Phone className="size-4" /> {phoneNumber || "Phone number to be added"}</a>
+            <a className="contact-link" href={phoneHref} aria-label={`Call Her Social Hub on ${phoneNumber}`}><Phone className="size-4" /> {phoneNumber || "Phone number to be added"}</a>
             <a className="contact-link" href="https://www.instagram.com/hersocial.hub?igsi=dTZrOWJsZnppdWlw" target="_blank" rel="noreferrer"><Instagram className="size-4" /> @hersocial.hub <ArrowUpRight className="size-4" /></a>
           </div>
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="brand-lockup"><img src={sparkMark} alt="" className="brand-spark" /><span>Social Hub</span></div>
+        <div className="brand-lockup"><img src={sparkMark} alt="" className="brand-spark" /><span>Her Social Hub</span></div>
         <p>Digital Marketing · Social Media · Branding</p>
         <p>Initial website concept, 2026</p>
       </footer>
