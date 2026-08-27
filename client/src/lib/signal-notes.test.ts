@@ -15,11 +15,12 @@ describe("Her Social Hub Signal Notes", () => {
     expect(home).toContain("One focused partner to help your social channels look sharper");
   });
 
-  it("uses a stacked editorial desktop treatment and a compact three-column mobile treatment", async () => {
+  it("uses a stacked editorial desktop treatment, compact tablet treatment, and readable phone layout", async () => {
     const styles = await readFile(resolve(projectRoot, "client/src/index.css"), "utf8");
 
     expect(styles).toContain(".signal-notes { list-style: none;");
     expect(styles).toContain(".signal-notes b { color: #f63e73;");
     expect(styles).toContain(".signal-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }");
+    expect(styles).toContain(".signal-notes { grid-template-columns: 1fr; margin-top: 2rem; }");
   });
 });

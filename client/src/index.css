@@ -214,11 +214,11 @@ html.reveal-ready .motion-image-story.is-visible { transform: translateY(0) scal
   .floating-spark { width: 3.8rem; top: 1.2rem; right: 1.45rem; }
   .visual-caption { font-size: .6rem; }
   .statement { font-size: clamp(2.8rem, 13vw, 4rem); }
-  .signal-notes { margin-top: 2rem; }
-  .signal-notes li { gap: .48rem; grid-template-columns: 1.65rem 1fr; padding: .75rem .45rem .75rem 0; }
-  .signal-notes li + li { padding-left: .45rem; }
-  .signal-notes b { font-size: 1.1rem; }
-  .signal-notes span { font-size: .6rem; letter-spacing: .075em; }
+  .signal-notes { grid-template-columns: 1fr; margin-top: 2rem; }
+  .signal-notes li { gap: .7rem; grid-template-columns: 1.8rem 1fr; padding: .85rem 0; }
+  .signal-notes li + li { padding-left: 0; }
+  .signal-notes b { font-size: 1.2rem; }
+  .signal-notes span { font-size: .72rem; letter-spacing: .09em; }
   .service-row { grid-template-columns: 2.15rem 1fr 1.2rem; gap: .7rem; }
   .service-row p { grid-column: 2 / 4; padding-right: .3rem; }
   .service-arrow { grid-column: 3; grid-row: 1; }
