@@ -92,7 +92,7 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .text-action { display: flex; align-items: center; gap: .7rem; font-size: .67rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .hero-visual { background: #f5dde5; position: relative; min-height: 480px; padding: clamp(2rem, 4vw, 4.3rem); overflow: hidden; display: flex; align-items: end; }
 .hero-image-wrap { align-self: stretch; width: 86%; margin-left: auto; overflow: hidden; box-shadow: 12px 14px 0 #111114; transform: translateY(calc(var(--hub-scroll, 0) * 16px)); transition: transform .2s cubic-bezier(.23,1,.32,1); will-change: transform; }
-.hero-image-wrap img { height: 100%; width: 100%; object-fit: cover; }
+.hero-image-wrap img { height: 100%; width: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.23,1,.32,1); }
 .identity-card { width: min(16rem, 40%); background: #fff; padding: .75rem; position: absolute; top: clamp(2rem, 5vw, 4.5rem); left: clamp(1.2rem, 3vw, 3.6rem); box-shadow: 8px 8px 0 #f63e73; }
 .identity-card p { margin: 0 0 .5rem; font-size: .57rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .identity-card img { display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
@@ -125,7 +125,7 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .image-story { display: grid; align-items: center; gap: clamp(2.5rem, 7vw, 7rem); }
 .content-story { grid-template-columns: .92fr 1.08fr; }
 .growth-story { grid-template-columns: 1.08fr .92fr; margin-top: clamp(4.5rem, 11vw, 11rem); }
-.image-story img { width: 100%; object-fit: cover; box-shadow: 10px 10px 0 #f63e73; }
+.image-story img { width: 100%; object-fit: cover; box-shadow: 10px 10px 0 #f63e73; transition: transform .5s cubic-bezier(.23,1,.32,1); }
 .content-story img { aspect-ratio: 1/1; }
 .growth-story img { aspect-ratio: 3/2; box-shadow: -10px 10px 0 #111114; }
 .story-copy h2 { margin: 0; font-size: clamp(2.7rem, 4.8vw, 5.3rem); max-width: 37rem; }
@@ -144,14 +144,27 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .site-footer .brand-lockup { color: #fdfcf9; }
 .site-footer p { margin: 0; color: rgba(255,255,255,.62); font-size: .57rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 
-html.reveal-ready [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .68s cubic-bezier(.23,1,.32,1), transform .68s cubic-bezier(.23,1,.32,1); }
+html.reveal-ready [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .68s cubic-bezier(.23,1,.32,1), transform .68s cubic-bezier(.23,1,.32,1); will-change: opacity, transform; }
 html.reveal-ready [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+html.reveal-ready .service-row:nth-child(2), html.reveal-ready .process-rail > div:nth-child(2) { transition-delay: 55ms; }
+html.reveal-ready .service-row:nth-child(3), html.reveal-ready .process-rail > div:nth-child(3) { transition-delay: 110ms; }
+html.reveal-ready .service-row:nth-child(4) { transition-delay: 165ms; }
+html.reveal-ready .service-row:nth-child(5) { transition-delay: 220ms; }
+html.reveal-ready .service-row:nth-child(6) { transition-delay: 275ms; }
+html.reveal-ready .motion-image-story { transform: translateY(24px) scale(.985); transition-duration: .78s; }
+html.reveal-ready .motion-image-story.is-visible { transform: translateY(0) scale(1); }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy, .hero-visual { animation: rise-in .6s cubic-bezier(.23,1,.32,1) both; }
   .hero-visual { animation-delay: .08s; }
+  .identity-card { animation: card-settle .55s .22s cubic-bezier(.23,1,.32,1) both; }
 }
 @keyframes rise-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes card-settle { from { opacity: 0; transform: translateY(-10px) rotate(-1deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-image-wrap:hover img, .image-story:hover img { transform: scale(1.025); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

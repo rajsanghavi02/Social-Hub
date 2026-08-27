@@ -178,8 +178,8 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="services" className="services-section" data-reveal aria-labelledby="services-heading">
-          <div className="services-intro">
+        <section id="services" className="services-section" aria-labelledby="services-heading">
+          <div className="services-intro" data-reveal>
             <p className="eyebrow"><span /> Our services</p>
             <h2 id="services-heading">Every part of your social presence, working in one direction.</h2>
             <p>
@@ -188,7 +188,7 @@ export default function Home() {
           </div>
           <div className="service-list">
             {services.map((service) => (
-              <article key={service.number} className="service-row">
+              <article key={service.number} className="service-row" data-reveal>
                 <span className="service-number">{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -198,20 +198,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="approach" className="approach-section" data-reveal aria-labelledby="approach-heading">
-          <div className="approach-header">
+        <section id="approach" className="approach-section" aria-labelledby="approach-heading">
+          <div className="approach-header" data-reveal>
             <p className="eyebrow light"><span /> How we work</p>
             <h2 id="approach-heading">From a good idea<br />to real momentum.</h2>
           </div>
           <div className="process-rail">
-            <div><b>01</b><span>Understand your brand</span><p>Your priorities, audience, and point of view set the direction.</p></div>
-            <div><b>02</b><span>Build the creative plan</span><p>We shape the content, campaign, and account rhythm around your goals.</p></div>
-            <div><b>03</b><span>Make it move</span><p>Consistent output and hands-on channel care turn the plan into presence.</p></div>
+            <div data-reveal><b>01</b><span>Understand your brand</span><p>Your priorities, audience, and point of view set the direction.</p></div>
+            <div data-reveal><b>02</b><span>Build the creative plan</span><p>We shape the content, campaign, and account rhythm around your goals.</p></div>
+            <div data-reveal><b>03</b><span>Make it move</span><p>Consistent output and hands-on channel care turn the plan into presence.</p></div>
           </div>
         </section>
 
-        <section className="image-led-section" data-reveal aria-label="Content and growth services">
-          <div className="image-story content-story">
+        <section className="image-led-section" aria-label="Content and growth services">
+          <div className="image-story content-story motion-image-story" data-reveal>
             <div className="story-copy">
               <p className="eyebrow"><span /> Content with intention</p>
               <h2>More than a post. A recognisable point of view.</h2>
@@ -219,7 +219,7 @@ export default function Home() {
             </div>
             <img src={contentImage} alt="Editorial Social Hub content creation still life" />
           </div>
-          <div className="image-story growth-story">
+          <div className="image-story growth-story motion-image-story" data-reveal>
             <img src={growthImage} alt="Abstract visual representing Social Hub reach and engagement strategy" />
             <div className="story-copy">
               <p className="eyebrow"><span /> Growth, without the guesswork</p>

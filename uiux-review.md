@@ -42,3 +42,11 @@ The contact-area badge is the only element identified as nonessential. Removing 
 ## Final Contact-Area Verification
 
 The simplified contact group has been verified at desktop and mobile sizes. The phone number and Instagram link remain clear, legible, and touch-friendly; the misleading placeholder badge is gone. No additional nonfunctional buttons or decorative control-like elements were identified, and the existing motion remains restricted to meaningful logo, scroll, and section-feedback cues.
+
+## Motion Enhancement Audit
+
+The existing experience already uses a good foundation: a concise hero entrance, a scroll-responsive brand spark, a sticky header response, and a single section-reveal pattern. To make the page feel more engaging without introducing unnecessary animation, the refinements will stagger the service rows and process steps only as they enter view, give the content images a minimal scale-and-lift reveal, and let the contact spark settle into view with its own short offset. These effects will use only `transform` and `opacity`, use the existing intersection observer rather than adding scroll handlers, and remain fully disabled under reduced-motion preferences.
+
+## Motion Enhancement Verification
+
+The refined desktop and mobile compositions preserve the original clean layout while increasing the page’s perceived responsiveness. Service rows and process steps now enter with a brief stagger, content visuals settle with a small lift and scale, and the hero identity card resolves after the initial hero motion. Image hover feedback appears only on pointer devices; touch layouts receive the same scroll reveals without hover-dependent interaction. A dedicated automated guard now confirms that the page retains its reveal hooks and reduced-motion treatment.
