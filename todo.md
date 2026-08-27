@@ -76,3 +76,27 @@ The refined motion system and its guard tests were pushed to GitHub at commit `8
 - [ ] Deploy the latest GitHub source and verify the production deployment has a stable live URL.
 - [ ] Test live navigation, calls to action, images, fonts, scrolling effects, and motion across desktop and mobile viewports.
 - [ ] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
+
+Vercel is connected on the free Hobby workspace `Socialhub`, but its GitHub sign-in connection is not yet linked. The GitHub connection control is open in Vercel account authentication settings.
+
+The GitHub connection has been initiated from the Vercel authentication settings and is awaiting the provider response.
+
+The Vercel GitHub App installation flow is open for the authenticated `rajsanghavi02` account and is ready to select its permitted repository access.
+
+The Vercel GitHub App connection completed successfully. A Vercel Hobby project named `social-hub` is now linked to `rajsanghavi02/Social-Hub` on the `main` production branch, with initial preview deployment `dpl_Der1EZJsuk5AxzfVTDXRfDHjwm3w` starting.
+
+The Social Hub project’s Vercel environment settings are open and currently have no project-level variables configured.
+
+The phone setting is being added as a Vercel Config value, not a secret, because it is intentionally displayed to visitors.
+
+The `VITE_SOCIAL_HUB_PHONE` key is prepared with the approved temporary value `+91 1234567890` for the production environment.
+
+The Vercel production redeploy dialog is open against the `main` branch deployment and the new environment setting is ready to be included in the build.
+
+The Vercel production deployment is ready at `https://social-hub-omega.vercel.app`. Its live page loads successfully with the configured phone number, the GitHub-hosted visual assets, branding, and primary navigation.
+
+- [x] Replace the remaining managed favicon reference with the repository-owned spark asset and verify the final Vercel build uses no `/manus-storage/` resources.
+
+The live Services navigation updates the production URL to `#services`; the remaining anchor-transition checks will be completed after the smooth scroll settles.
+
+The deployed Services anchor settles correctly at the service catalogue, with the section content and primary visual hierarchy intact.
