@@ -34,21 +34,21 @@ The project manifest includes the full template dependency set. The following gr
 
 ## Asset Inventory and Storage Model
 
-The live website uses project-managed asset URLs beginning with `/manus-storage/`. This keeps large image files out of the deployed source tree and avoids slow website deployment. The exact same original image assets are mirrored in the GitHub repository under `assets/` so the repository remains a complete maintenance handoff.
+The latest source is configured for Vercel using the repository-owned image mirror. The five public visual assets are loaded from GitHub’s raw asset URL under `assets/`, while the original files remain committed to the repository for a complete maintenance handoff. This keeps large image files out of the Vite client source folder while making them available to the Vercel deployment.
 
-| GitHub asset file | Live website reference | Use |
+| GitHub asset file | Vercel-safe live reference | Use |
 | --- | --- | --- |
-| `assets/social-hub-supplied-logo.jpg` | `/manus-storage/social-hub-supplied-logo_1446de7c.jpg` | The supplied HER SOCIAL HUB logo shown in the hero identity card. |
-| `assets/social-hub-spark-mark.png` | `/manus-storage/social-hub-spark-mark_6f5fa7b1.png` | The pink four-point mark used in the header, hero, contact section, and site footer. |
-| `assets/social-hub-hero-editorial.jpg` | `/manus-storage/social-hub-hero-editorial_ac5e19e7.jpg` | Hero art direction. |
-| `assets/social-hub-content-tile.jpg` | `/manus-storage/social-hub-content-tile_6dfed556.jpg` | Content-creation section visual. |
-| `assets/social-hub-growth-tile.jpg` | `/manus-storage/social-hub-growth-tile_b901bd01.jpg` | Reach-and-engagement section visual. |
+| `assets/social-hub-supplied-logo.jpg` | `https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets/social-hub-supplied-logo.jpg` | The supplied HER SOCIAL HUB logo shown in the hero identity card. |
+| `assets/social-hub-spark-mark.png` | `https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets/social-hub-spark-mark.png` | The pink four-point mark used in the header, hero, contact section, and site footer. |
+| `assets/social-hub-hero-editorial.jpg` | `https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets/social-hub-hero-editorial.jpg` | Hero art direction. |
+| `assets/social-hub-content-tile.jpg` | `https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets/social-hub-content-tile.jpg` | Content-creation section visual. |
+| `assets/social-hub-growth-tile.jpg` | `https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets/social-hub-growth-tile.jpg` | Reach-and-engagement section visual. |
 
 The icon set is not stored as image files: the icons are supplied by the `lucide-react` package and bundled at build time. The display fonts are **Bodoni Moda** and **DM Sans**, requested from Google Fonts in `client/src/index.css`. There are no local font files in the repository, so an internet connection is required to retrieve them in the current configuration.
 
 ### Moving to Another Host
 
-For continued hosting on this project, retain the `/manus-storage/` image URLs already present in `client/src/pages/Home.tsx`. If you deploy outside this managed project, upload the mirrored `assets/` files to your chosen static host, object storage, or CDN, then replace the five URLs at the top of `Home.tsx` with the new public asset paths. Do not put the large originals into `client/public/` when deploying this project here; that can slow or block the managed deployment.
+The current Vercel configuration uses the GitHub raw asset URLs declared in `client/src/pages/Home.tsx`. If you later use a CDN, object-storage provider, or another static host, upload the mirrored `assets/` files there and change only the `assetBaseUrl` constant at the top of `Home.tsx`. Do not commit populated local environment files; keep `.env` private and use `CONFIGURATION.md` as the committed setting reference.
 
 ## Environment Variables and the `.env` File
 
@@ -120,7 +120,7 @@ pnpm build     # production build
 pnpm start     # run the built Node/Express app
 ```
 
-The latest validation run passed TypeScript checks, three automated tests across two test files, and the production build. The build output is generated into `dist/` and is intentionally excluded from Git because it is reproducible. No external hosting configuration, custom domain, DNS setting, or CI/CD workflow is included in the repository. To publish within the current project, create a checkpoint and use the project’s **Publish** control; configure `VITE_SOCIAL_HUB_PHONE` in the deployment environment first.
+The latest validation run passed TypeScript checks, five automated tests across three test files, and the production build. The build output is generated into `dist/` and is intentionally excluded from Git because it is reproducible. The repository now includes `vercel.json` for a Git-connected Vercel deployment: Vercel installs dependencies with `pnpm install --frozen-lockfile`, executes `pnpm build`, and serves `dist/public` as the static output. Configure `VITE_SOCIAL_HUB_PHONE` in the Vercel deployment environment before deploying.
 
 ## Recommended Maintenance Sequence
 

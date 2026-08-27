@@ -14,11 +14,12 @@ import {
   Phone,
 } from "lucide-react";
 
-const suppliedLogo = "/manus-storage/social-hub-supplied-logo_1446de7c.jpg";
-const sparkMark = "/manus-storage/social-hub-spark-mark_6f5fa7b1.png";
-const heroImage = "/manus-storage/social-hub-hero-editorial_ac5e19e7.jpg";
-const contentImage = "/manus-storage/social-hub-content-tile_6dfed556.jpg";
-const growthImage = "/manus-storage/social-hub-growth-tile_b901bd01.jpg";
+const assetBaseUrl = "https://raw.githubusercontent.com/rajsanghavi02/Social-Hub/main/assets";
+const suppliedLogo = `${assetBaseUrl}/social-hub-supplied-logo.jpg`;
+const sparkMark = `${assetBaseUrl}/social-hub-spark-mark.png`;
+const heroImage = `${assetBaseUrl}/social-hub-hero-editorial.jpg`;
+const contentImage = `${assetBaseUrl}/social-hub-content-tile.jpg`;
+const growthImage = `${assetBaseUrl}/social-hub-growth-tile.jpg`;
 
 const services = [
   {

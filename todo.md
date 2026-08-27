@@ -63,5 +63,16 @@ The technical handoff and five repository-owned visual assets were pushed and ve
 - [x] Add restrained scroll reveals, image transitions, and graphic movement that improve the page’s interactive rhythm.
 - [x] Ensure all animation is transform/opacity based, touch-safe, and disabled or reduced for users who request reduced motion.
 - [x] Verify the completed motion experience at laptop and mobile sizes and re-run TypeScript, tests, and production build checks.
-- [ ] Synchronize the refined motion system and its test coverage to the Social Hub GitHub repository.
-- [ ] Save the motion-enhanced checkpoint and provide the final review handoff.
+- [x] Synchronize the refined motion system and its test coverage to the Social Hub GitHub repository.
+
+The refined motion system and its guard tests were pushed to GitHub at commit `8231501` with the summary `Enhance Social Hub scroll motion`.
+- [x] Save the motion-enhanced checkpoint and provide the final review handoff.
+
+## Vercel Hobby Deployment — August 2026
+
+- [ ] Review the available Vercel and GitHub connection state, Hobby-plan eligibility, and the project’s Vercel compatibility requirements.
+- [x] Add Vercel deployment configuration for the React/Vite frontend and ensure managed assets have an external-hosting-safe path.
+- [ ] Connect the existing GitHub repository to a Vercel Hobby project and configure the public phone number environment variable without committing it.
+- [ ] Deploy the latest GitHub source and verify the production deployment has a stable live URL.
+- [ ] Test live navigation, calls to action, images, fonts, scrolling effects, and motion across desktop and mobile viewports.
+- [ ] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
