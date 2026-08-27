@@ -140,7 +140,6 @@ h1 em, .statement em, .contact-section h2 em { color: #f63e73; font-weight: 500;
 .contact-links { display: flex; flex-wrap: wrap; gap: .85rem 1.8rem; }
 .contact-link { color: #fff; border-bottom: 1px solid rgba(255,255,255,.7); padding: .5rem 0; display: inline-flex; align-items: center; gap: .55rem; font-size: .72rem; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; }
 .contact-link:hover { color: #111114; border-color: #111114; }
-.contact-link small { font-size: .52rem; padding: .18rem .3rem; background: rgba(17,17,20,.18); letter-spacing: .1em; }
 .site-footer { background: #111114; color: #fdfcf9; padding: 1.4rem clamp(1.25rem, 4vw, 4.5rem); display: flex; align-items: center; gap: 1.5rem; justify-content: space-between; flex-wrap: wrap; }
 .site-footer .brand-lockup { color: #fdfcf9; }
 .site-footer p { margin: 0; color: rgba(255,255,255,.62); font-size: .57rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }

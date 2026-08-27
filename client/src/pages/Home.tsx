@@ -235,7 +235,7 @@ export default function Home() {
           <h2 id="contact-heading">Let&apos;s map your<br /><em>social momentum.</em></h2>
           <p className="contact-copy">Tell us where your brand is now and where you want it to go. We&apos;ll start the conversation from there.</p>
           <div className="contact-links">
-            <a className="contact-link" href={phoneHref} aria-label={`Call Social Hub on ${phoneNumber}`}><Phone className="size-4" /> {phoneNumber || "Phone number to be added"} <small>Placeholder</small></a>
+            <a className="contact-link" href={phoneHref} aria-label={`Call Social Hub on ${phoneNumber}`}><Phone className="size-4" /> {phoneNumber || "Phone number to be added"}</a>
             <a className="contact-link" href="https://www.instagram.com/hersocial.hub?igsi=dTZrOWJsZnppdWlw" target="_blank" rel="noreferrer"><Instagram className="size-4" /> @hersocial.hub <ArrowUpRight className="size-4" /></a>
           </div>
         </section>
