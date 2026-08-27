@@ -38,3 +38,5 @@ The setting is public by design because it is displayed in the site and used in 
 The website content structure lives in `client/src/pages/Home.tsx`, while the visual language, responsive layouts, and motion behaviour are maintained in `client/src/index.css`. The service content is represented by a single data array, making service copy easy to update. Image URLs point to the project-managed asset store; replace these values with new managed asset URLs when future client photography is added.
 
 The project also includes `CONFIGURATION.md` with a short guide to editable contact settings.
+
+For the full implementation overview—including the asset inventory, environment configuration, static content locations, folder structure, and deployment workflow—see [TECHNICAL_HANDOFF.md](./TECHNICAL_HANDOFF.md).
