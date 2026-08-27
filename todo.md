@@ -78,7 +78,9 @@ The refined motion system and its guard tests were pushed to GitHub at commit `8
 - [x] Verify the live desktop contact route, phone and Instagram actions, asset/font loading, and anchor navigation.
 - [x] Verify the live Vercel mobile layout, touch-ready contact hierarchy, section navigation, and reduced-motion safeguards.
 - [x] Confirm the final Vercel deployment after the handoff documentation update and synchronize that maintenance note to GitHub.
-- [ ] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
+- [x] Save the Vercel deployment handoff and report the live URL plus future GitHub deployment workflow.
+
+The Vercel handoff has been delivered with the preferred live URL and confirmation that pushes to GitHub `main` trigger automatic production deployments.
 
 Vercel is connected on the free Hobby workspace `Socialhub`, but its GitHub sign-in connection is not yet linked. The GitHub connection control is open in Vercel account authentication settings.
 
@@ -143,6 +145,8 @@ An isolated live mobile verification used a 375 × 812 viewport with one touch p
 - [x] Add focused regression coverage, validate the text-only update, and synchronize the completed source to GitHub.
 
 The text-only refinement passed `pnpm check`, `pnpm test` with 9 tests in 6 files, and `pnpm build`. The latest editable source was pushed to `rajsanghavi02/Social-Hub` on `main` at commit `6031fe7` (`Refine Social Hub public copy`).
+
+Vercel automatically deployed the source commit and reported it ready. The preferred production URL now serves the colon-style page title and the approved hero sentence without an em dash, while the intentional visual “HER SOCIAL HUB” lock-up remains unchanged.
 
 - [x] Apply the cleanest available Social Hub Vercel alias and deploy the navigation update through the GitHub-linked project.
 - [x] Verify the final root URL, clean in-page navigation, and desktop/mobile responsive behaviour.
