@@ -82,7 +82,10 @@ export default function Home() {
       const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
       const progress = Math.min(window.scrollY / maxScroll, 1);
       document.documentElement.style.setProperty("--hub-scroll", progress.toFixed(3));
-      setHasScrolled(window.scrollY > 12);
+      setHasScrolled((previous) => {
+        const next = window.scrollY > 12;
+        return previous === next ? previous : next;
+      });
       animationFrame = 0;
     };
     const onScroll = () => {
@@ -137,7 +140,7 @@ export default function Home() {
       <main id="top">
         <section className="hero-section" aria-labelledby="hero-heading">
           <div className="hero-copy">
-            <p className="eyebrow"><span /> 01 — Social growth partner</p>
+            <p className="eyebrow"><span /> Social growth partner</p>
             <h1 id="hero-heading">
               Make your next
               <em>scroll</em> count.
@@ -177,7 +180,7 @@ export default function Home() {
 
         <section id="services" className="services-section" data-reveal aria-labelledby="services-heading">
           <div className="services-intro">
-            <p className="eyebrow"><span /> 02 — Our services</p>
+            <p className="eyebrow"><span /> Our services</p>
             <h2 id="services-heading">Every part of your social presence, working in one direction.</h2>
             <p>
               Whether you need day-to-day account care, a campaign shoot, or broader digital marketing support, Social Hub can shape the work around your business.
@@ -197,7 +200,7 @@ export default function Home() {
 
         <section id="approach" className="approach-section" data-reveal aria-labelledby="approach-heading">
           <div className="approach-header">
-            <p className="eyebrow light"><span /> 03 — How we work</p>
+            <p className="eyebrow light"><span /> How we work</p>
             <h2 id="approach-heading">From a good idea<br />to real momentum.</h2>
           </div>
           <div className="process-rail">
@@ -228,7 +231,7 @@ export default function Home() {
 
         <section id="contact" className="contact-section" data-reveal aria-labelledby="contact-heading">
           <div className="contact-spark-wrap"><img src={sparkMark} alt="" /></div>
-          <p className="eyebrow light"><span /> 04 — Let&apos;s work together</p>
+          <p className="eyebrow light"><span /> Let&apos;s work together</p>
           <h2 id="contact-heading">Let&apos;s map your<br /><em>social momentum.</em></h2>
           <p className="contact-copy">Tell us where your brand is now and where you want it to go. We&apos;ll start the conversation from there.</p>
           <div className="contact-links">
